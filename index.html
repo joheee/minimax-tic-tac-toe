@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/codehouse.ico" />
+    <title>Code House | Beat The Bot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="board-container">
+      <img
+        class="outer-board-image"
+        src="./assets/background.png"
+        alt="tic tac toe by Code House"
+      />
+      <div class="main-board-container">
+        <img class="frame-image" src="./assets/framer.png" alt="" />
+        <div class="tile-container">
+          <div id="tile_0_0" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+            <img class="tile-planet-hover" src="./assets/planet/planet-hover.png" alt="" />
+          </div>
+          <div id="tile_0_1" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+            <img class="tile-star-hover" src="./assets/star/star-hover.png" alt="" />
+          </div>
+          <div id="tile_0_2" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+            <img class="tile-star-fill" src="./assets/star/star-fill.png" alt="" />
+          </div>
+          <div id="tile_1_0" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+            <img class="tile-planet-fill" src="./assets/planet/planet-fill.png" alt="" />
+          </div>
+          <div id="tile_1_1" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+          </div>
+          <div id="tile_1_2" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+          </div>
+          <div id="tile_2_0" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+          </div>
+          <div id="tile_2_1" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+          </div>
+          <div id="tile_2_2" class="each-tile-container">
+            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="score-container">
+      <div id="planet-player" class="player-container ">
+        <img src="./assets/planet/planet-fill.png" alt="" />
+        <div id="planet-score">0</div>
+      </div>
+      <img id="restart-button" src="./assets/restart.png" alt="" />
+      <div id="star-player" class="player-container active">
+        <img src="./assets/star/star-fill.png" alt="" />
+        <div id="star-score">0</div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script src="./index.js" type="module"></script>
