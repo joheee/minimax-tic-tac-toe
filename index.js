@@ -40,7 +40,6 @@ var board = [
 var HUMAN = -1;
 var COMP = +1;
 
-/* Function to heuristic evaluation of state. */
 function evalute(state) {
   var score = 0;
 
@@ -55,7 +54,6 @@ function evalute(state) {
   return score;
 }
 
-/* This function tests if a specific player wins */
 function gameOver(state, player) {
   var win_state = [
     [state[0][0], state[0][1], state[0][2]],
@@ -79,7 +77,6 @@ function gameOver(state, player) {
   return false;
 }
 
-/* This function test if the human or computer wins */
 function gameOverAll(state) {
   return gameOver(state, HUMAN) || gameOver(state, COMP);
 }
@@ -95,7 +92,6 @@ function emptyCells(state) {
   return cells;
 }
 
-/* A move is valid if the chosen cell is empty */
 function validMove(x, y) {
   try {
     if (board[x][y] == 0) {
@@ -108,7 +104,6 @@ function validMove(x, y) {
   }
 }
 
-/* Set the move on board, if the coordinates are valid */
 function setMove(x, y, player) {
   if (validMove(x, y)) {
     board[x][y] = player;
@@ -118,8 +113,6 @@ function setMove(x, y, player) {
   }
 }
 
-/* *** AI function that choice the best move *** */
-// Read more on https://github.com/Cledersonbc/tic-tac-toe-minimax/
 function minimax(state, depth, player) {
   var best;
 
