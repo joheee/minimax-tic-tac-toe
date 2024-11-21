@@ -17,43 +17,66 @@
       <div class="main-board-container">
         <img class="frame-image" src="./assets/framer.png" alt="" />
         <div class="tile-container">
-          <div id="tile_0_0" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_0_1" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_0_2" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_1_0" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_1_1" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_1_2" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_2_0" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_2_1" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
-          <div id="tile_2_2" class="each-tile-container">
-            <img class="tile-hover" src="./assets/slot-background.png" alt="" />
-          </div>
+          <div
+            id="tile_00"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty win"
+          ></div>
+          <div
+            id="tile_01"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
+          <div
+            id="tile_02"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
+          <div
+            id="tile_10"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
+          <div
+            id="tile_11"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
+          <div
+            id="tile_12"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
+          <div
+            id="tile_20"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
+          <div
+            id="tile_21"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
+          <div
+            id="tile_22"
+            onclick="handleClickTile(this)"
+            class="each-tile-container empty"
+          ></div>
         </div>
       </div>
     </div>
     <div class="score-container">
-      <div id="planet-player" class="player-container ">
+      <div id="planet-player" class="player-container">
         <img src="./assets/planet/planet-fill.png" alt="" />
         <div id="planet-score">0</div>
       </div>
-      <img id="restart-button" src="./assets/restart.png" alt="" />
-      <div id="star-player" class="player-container active">
+      <img
+        id="restart-button"
+        onclick="handleRestart()"
+        src="./assets/restart.png"
+        alt=""
+      />
+      <div id="star-player" class="player-container">
         <img src="./assets/star/star-fill.png" alt="" />
         <div id="star-score">0</div>
       </div>
@@ -61,4 +84,4 @@
   </body>
 </html>
 
-<script src="./index.js" type="module"></script>
+<script src="./index.js" type="text/javascript"></script>

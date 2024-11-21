@@ -45,19 +45,19 @@ body {
   gap: 0px;
 }
 
-#tile_0_0 {
+#tile_00 {
   overflow: hidden;
   border-top-left-radius: 47px;
 }
-#tile_0_2 {
+#tile_02 {
   overflow: hidden;
   border-top-right-radius: 50px;
 }
-#tile_2_0 {
+#tile_20 {
   overflow: hidden;
   border-bottom-left-radius: 48px;
 }
-#tile_2_2 {
+#tile_22 {
   overflow: hidden;
   border-bottom-right-radius: 52px;
 }
@@ -100,21 +100,49 @@ body {
   transform: rotate(360deg) scale(1.2);
 }
 
-.tile-hover {
-  cursor: pointer;
-  z-index: 0;
+.each-tile-container {
+  position: relative;
+  height: 257px;
 }
 
-.each-tile-container {
+.star {
+  background: url("./assets/star/star-fill.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
   position: relative;
 }
 
-.tile-planet-fill,
-.tile-star-fill,
-.tile-planet-hover,
-.tile-star-hover {
+.planet {
+  background: url("./assets/planet/planet-fill.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.empty {
+  background: url("./assets/slot-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.empty:hover::before {
+  content: "";
   position: absolute;
-  z-index: 10;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./assets/planet/planet-hover.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  pointer-events: none;
 }
