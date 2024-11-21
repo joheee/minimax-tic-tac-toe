@@ -248,15 +248,13 @@ function handleClickTile(cell) {
       cell.style.opacity = "0.8";
     }
 
-    // msg = document.getElementById("message");
-    // msg.innerHTML = "You lose!";
     localStorage.setItem("planet-point", parseInt(PLAYER_PLANET_SCORE) + 1);
     document.getElementById("planet-score").innerText =
       parseInt(PLAYER_PLANET_SCORE) + 1;
+    document.getElementById("lose-modal").style.display = "flex";
   }
   if (emptyCells(board).length == 0 && !gameOverAll(board)) {
-    // var msg = document.getElementById("message");
-    // msg.innerHTML = "Draw!";
+    document.getElementById("draw-modal").style.display = "flex";
   }
 }
 function handleRestart() {

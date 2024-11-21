@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="lose-modal" class="lose-modal">
+      <div class="content-modal">
+        <img src="./assets/planet.png" alt="" />
+        <img
+          id="restart-button"
+          onclick="handleRestart()"
+          src="./assets/restart.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div id="draw-modal" class="draw-modal">
+      <div class="content-modal">
+        <img src="./assets/draw.png" alt="" />
+        <img
+          id="restart-button"
+          onclick="handleRestart()"
+          src="./assets/restart.png"
+          alt=""
+        />
+      </div>
+    </div>
     <div class="board-container">
       <img
         class="outer-board-image"
