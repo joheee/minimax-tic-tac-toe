@@ -1,1 +1,5 @@
-https://www.figma.com/design/ctRvXforms9hwbxrCKPnwW/Tic-Tac-Toe---Variables!-(Community)?node-id=0-1&node-type=canvas&t=bqPVpfsNDwIxc5Z4-0
+flow progress
+[] on hover and onclick
+[] change player turn
+[] winning validation
+[] interfacing
