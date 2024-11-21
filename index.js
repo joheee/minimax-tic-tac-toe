@@ -234,9 +234,7 @@ function handleClickTile(cell) {
       cell = document.getElementById(
         `tile_${String(lines[i][0])}${String(lines[i][1])}`
       );
-      cell.style.height = "80%";
-      cell.style.width = "80%";
-      cell.style.margin = "auto";
+      cell.style.opacity = "0.8";
     }
 
     // msg = document.getElementById("message");
