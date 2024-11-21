@@ -1,3 +1,16 @@
+// SINGLETON SCORE
+if (localStorage.getItem("star-point") === null) {
+  localStorage.setItem("star-point", 0);
+}
+
+if (localStorage.getItem("planet-point") === null) {
+  localStorage.setItem("planet-point", 0);
+}
+const PLAYER_STAR_SCORE = localStorage.getItem("star-point");
+const PLAYER_PLANET_SCORE = localStorage.getItem("planet-point");
+document.getElementById("planet-score").innerText = PLAYER_PLANET_SCORE;
+document.getElementById("star-score").innerText = PLAYER_STAR_SCORE;
+
 // UI UTILITY
 const TILE_EMPTY = "empty";
 const TILE_STAR = "star";
@@ -84,7 +97,6 @@ function emptyCells(state) {
 
 /* A move is valid if the chosen cell is empty */
 function validMove(x, y) {
-  var empties = emptyCells(board);
   try {
     if (board[x][y] == 0) {
       return true;
@@ -145,7 +157,6 @@ function minimax(state, depth, player) {
 function aiTurn() {
   var x, y;
   var move;
-  var cell;
 
   if (emptyCells(board).length == 9) {
     x = parseInt(Math.random() * 3);
@@ -172,7 +183,7 @@ function handleClickTile(cell) {
     if (move == true) {
       //   cell.innerHTML = "X";
       fillElement(cell, TILE_STAR);
-      (PLAYER_STAR, PLAYER_PLANET);
+      PLAYER_STAR, PLAYER_PLANET;
       if (conditionToContinue) aiTurn();
     }
   }
@@ -239,6 +250,9 @@ function handleClickTile(cell) {
 
     // msg = document.getElementById("message");
     // msg.innerHTML = "You lose!";
+    localStorage.setItem("planet-point", parseInt(PLAYER_PLANET_SCORE) + 1);
+    document.getElementById("planet-score").innerText =
+      parseInt(PLAYER_PLANET_SCORE) + 1;
   }
   if (emptyCells(board).length == 0 && !gameOverAll(board)) {
     // var msg = document.getElementById("message");
